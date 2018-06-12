@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label>Actual speed of mouse:</Label>
+        <Label Grid.Column="1" Content="8" x:Name="SpeedLabel"/>
+        <Button Grid.Row="1" Grid.Column="0" Content="Speed up" HorizontalAlignment="Center" Margin="36,10,36,-19" VerticalAlignment="Top" Width="100" Click="mouseSpeedUp" Height="40"/>
+        <Button Grid.Row="1" Grid.Column="1"  Content="Speed down" HorizontalAlignment="Center" Margin="36,10,36,-18" VerticalAlignment="Top" Width="100" Click="mouseSpeedDown" Height="40"/>
+        <Button Grid.Row="1" Grid.Column="2"  Content="Default speed" HorizontalAlignment="Center" Margin="36,10,37,-17" VerticalAlignment="Top" Width="100" Click="mouseSpeedDefault" Height="40"/>
+        <Button Grid.Row="2" Grid.Column="1" Background="Red"  Content="Max speed" HorizontalAlignment="Center" Margin="36,10,37,-17" VerticalAlignment="Top" Width="100" Click="mouseSpeedMax" Height="40"/>
+        <Button Grid.Row="2" Grid.Column="1" Background="Blue"  Content="Min speed" HorizontalAlignment="Center" Margin="36,57,36,0" VerticalAlignment="Top" Width="100" Click="mouseSpeedMin" Height="40"/>
     </Grid>
 </Window>
